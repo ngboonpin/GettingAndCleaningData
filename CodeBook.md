@@ -32,18 +32,18 @@ The sensor signals (accelerometer and gyroscope) were pre-processed by applying 
 
 Subject
 - 1-2 character
-	-Subject ID from 1 - 30 
+    -Subject ID from 1 - 30 
 
 Activity_Name					
 - 8-18 character 
-	-1 WALKING 
-	-2 WALKING_UPSTAIRS 
-	-3 WALKING_DOWNSTAIRS
-	-4 SITTING
-	-5 STANDING
-	-6 LAYING 
+    -1 WALKING 
+    -2 WALKING_UPSTAIRS 
+    -3 WALKING_DOWNSTAIRS
+    -4 SITTING
+    -5 STANDING
+    -6 LAYING 
 
 timeBodyAccelerometer-mean()-X			
 - numeric
-	-[-1,1] average value for time body accelerometer 
+    -[-1,1] average value for time body accelerometer 
 						

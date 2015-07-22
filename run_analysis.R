@@ -81,7 +81,6 @@ names(stage_data2)<-gsub("Mag", "Magnitude", names(stage_data2))
 names(stage_data2)<-gsub("BodyBody", "Body", names(stage_data2))
 
 #Get tidy data
-
 tidy_data <- aggregate(. ~ Subject + Activity_Name, stage_data2, mean )
 write.table(tidy_data, file = "tidydata.txt",row.name=FALSE)
 

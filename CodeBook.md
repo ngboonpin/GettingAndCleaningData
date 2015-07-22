@@ -32,7 +32,7 @@ The sensor signals (accelerometer and gyroscope) were pre-processed by applying 
 
 Subject
 - 1-2 character
-    -Subject ID from 1 - 30 
+    *Subject ID from 1 - 30 
 
 Activity_Name					
 - 8-18 character

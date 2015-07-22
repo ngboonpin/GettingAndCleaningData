@@ -35,7 +35,7 @@ Subject
     -Subject ID from 1 - 30 
 
 Activity_Name					
-- 8-18 character 
+- 8-18 character
     -1 WALKING 
     -2 WALKING_UPSTAIRS 
     -3 WALKING_DOWNSTAIRS

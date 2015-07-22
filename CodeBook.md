@@ -1,20 +1,20 @@
 # Code Book for Course Project - Getting & Cleaning Data
-\s\s
+
 This CodeBook that describes the variables, the data, and any transformations or work that was performed to clean up the source data to create a tidy dataset as per requirements of course project.
-\s\s
+
 ##Data Set Description
-\s\s
+
 The experiments have been carried out with a group of 30 volunteers within an age bracket of 19-48 years. Each person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on the waist. Using its embedded accelerometer and gyroscope, we captured 3-axial linear acceleration and 3-axial angular velocity at a constant rate of 50Hz. The experiments have been video-recorded to label the data manually. The obtained dataset has been randomly partitioned into two sets, where 70% of the volunteers was selected for generating the training data and 30% the test data.
-\s\s
+
 The sensor signals (accelerometer and gyroscope) were pre-processed by applying noise filters and then sampled in fixed-width sliding windows of 2.56 sec and 50% overlap (128 readings/window). The sensor acceleration signal, which has gravitational and body motion components, was separated using a Butterworth low-pass filter into body acceleration and gravity. The gravitational force is assumed to have only low frequency components, therefore a filter with 0.3 Hz cutoff frequency was used. From each window, a vector of features was obtained by calculating variables from the time and frequency domain.
-\s\s
+
 ##For each record it is provided:
 * Triaxial acceleration from the accelerometer (total acceleration) and the estimated body acceleration.
 * Triaxial Angular velocity from the gyroscope.
 * A 561-feature vector with time and frequency domain variables.
 * Its activity label.
 * An identifier of the subject who carried out the experiment.
-\s\s
+
 ##The dataset includes the following files:
 * 'features_info.txt': Shows information about the variables
 * 'features.txt': List of all features
@@ -27,21 +27,21 @@ The sensor signals (accelerometer and gyroscope) were pre-processed by applying 
 * 'train/Inertial Signals/total_acc_x_train.txt': The acceleration signal from the smartphone accelerometer X axis in standard gravity units 'g'. Every row shows a 128 element vector. The same description applies for the 'total_acc_x_train.txt' and 'total_acc_z_train.txt' files for the Y and Z axis.
 * 'train/Inertial Signals/body_acc_x_train.txt': The body acceleration signal obtained by subtracting the gravity from the total acceleration.
 * 'train/Inertial Signals/body_gyro_x_train.txt': The angular velocity vector measured by the gyroscope for each window sample. The units are radians/second.
-\s\s
-##Variables
-\s
-Subject						1-2 character \s
-						Subject ID from 1 - 30 \s
-\s
 
-Activity_Name					8-18 character \s
-						1 WALKING \s
-						2 WALKING_UPSTAIRS \s
-						3 WALKING_DOWNSTAIRS \s
-						4 SITTING \s
-						5 STANDING \s
-						6 LAYING \s
-\s
-timeBodyAccelerometer-mean()-X			numeric \s
-						[-1,1] average value for time body accelerometer \s
+##Variables
+
+Subject						1-2 character 
+						Subject ID from 1 - 30 
+
+
+Activity_Name					8-18 character 
+						1 WALKING 
+						2 WALKING_UPSTAIRS 
+						3 WALKING_DOWNSTAIRS 
+						4 SITTING 
+						5 STANDING 
+						6 LAYING 
+
+timeBodyAccelerometer-mean()-X			numeric 
+						[-1,1] average value for time body accelerometer 
 						

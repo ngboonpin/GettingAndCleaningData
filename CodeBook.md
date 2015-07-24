@@ -28,6 +28,24 @@ The sensor signals (accelerometer and gyroscope) were pre-processed by applying 
 * 'train/Inertial Signals/body_acc_x_train.txt': The body acceleration signal obtained by subtracting the gravity from the total acceleration.
 * 'train/Inertial Signals/body_gyro_x_train.txt': The angular velocity vector measured by the gyroscope for each window sample. The units are radians/second.
 
+##Work/Transformation
+* read variable names, variables(data), activities, subject and store them at their respective data frame
+* Set variable names to test and train data frame
+* Add column subject and activity to test and train data frame using cbind
+* combine test and train data frame using rbind
+* select only mean and std variable for further processing by using grepl function and subsetting
+* applying merge function to bring activity name to data frame preprared at previous step
+* remove column Activity (code)
+* rename column to have more meaningful name using gsub
+  * t -> time
+  * f -> frequency
+  * Acc -> Accelerometer
+  * Gyro -> Gyroscope
+  * Mag -> Magnitude
+  * BodyBody -> Body
+* prepare tidy data frame by apply aggregate function, basically it averages all std and mean variables and group by Subject, Activity_Name
+* last step is to output tidy data to text file 
+
 ##Variables
 
 Subject
@@ -43,7 +61,71 @@ Activity_Name
     - 5 STANDING
     - 6 LAYING 
 
+**Following Variables are numeric and bounded within [-1,1]:-**
 timeBodyAccelerometer-mean()-X			
-- numeric
-    - [-1,1] average value for time body accelerometer 
-						
+timeBodyAccelerometer-mean()-Y
+timeBodyAccelerometer-mean()-Z
+timeBodyAccelerometer-std()-X
+timeBodyAccelerometer-std()-Y
+timeBodyAccelerometer-std()-Z
+timeGravityAccelerometer-mean()-X
+timeGravityAccelerometer-mean()-Y
+timeGravityAccelerometer-mean()-Z
+timeGravityAccelerometer-std()-X
+timeGravityAccelerometer-std()-Y
+timeGravityAccelerometer-std()-Z
+timeBodyAccelerometerJerk-mean()-X
+timeBodyAccelerometerJerk-mean()-Y
+timeBodyAccelerometerJerk-mean()-Z
+timeBodyAccelerometerJerk-std()-X
+timeBodyAccelerometerJerk-std()-Y
+timeBodyAccelerometerJerk-std()-Z
+timeBodyGyroscope-mean()-X
+timeBodyGyroscope-mean()-Y
+timeBodyGyroscope-mean()-Z
+timeBodyGyroscope-std()-X
+timeBodyGyroscope-std()-Y
+timeBodyGyroscope-std()-Z
+timeBodyGyroscopeJerk-mean()-X
+timeBodyGyroscopeJerk-mean()-Y
+timeBodyGyroscopeJerk-mean()-Z
+timeBodyGyroscopeJerk-std()-X
+timeBodyGyroscopeJerk-std()-Y
+timeBodyGyroscopeJerk-std()-Z
+timeBodyAccelerometerMagnitude-mean()
+timeBodyAccelerometerMagnitude-std()
+timeGravityAccelerometerMagnitude-mean()
+timeGravityAccelerometerMagnitude-std()
+timeBodyAccelerometerJerkMagnitude-mean()
+timeBodyAccelerometerJerkMagnitude-std()
+timeBodyGyroscopeMagnitude-mean()
+timeBodyGyroscopeMagnitude-std()
+timeBodyGyroscopeJerkMagnitude-mean()
+timeBodyGyroscopeJerkMagnitude-std()
+frequencyBodyAccelerometer-mean()-X
+frequencyBodyAccelerometer-mean()-Y
+frequencyBodyAccelerometer-mean()-Z
+frequencyBodyAccelerometer-std()-X
+frequencyBodyAccelerometer-std()-Y
+frequencyBodyAccelerometer-std()-Z
+frequencyBodyAccelerometerJerk-mean()-X
+frequencyBodyAccelerometerJerk-mean()-Y
+frequencyBodyAccelerometerJerk-mean()-Z
+frequencyBodyAccelerometerJerk-std()-X
+frequencyBodyAccelerometerJerk-std()-Y
+frequencyBodyAccelerometerJerk-std()-Z
+frequencyBodyGyroscope-mean()-X
+frequencyBodyGyroscope-mean()-Y
+frequencyBodyGyroscope-mean()-Z
+frequencyBodyGyroscope-std()-X
+frequencyBodyGyroscope-std()-Y
+frequencyBodyGyroscope-std()-Z
+frequencyBodyAccelerometerMagnitude-mean()
+frequencyBodyAccelerometerMagnitude-std()
+frequencyBodyAccelerometerJerkMagnitude-mean()
+frequencyBodyAccelerometerJerkMagnitude-std()
+frequencyBodyGyroscopeMagnitude-mean()
+frequencyBodyGyroscopeMagnitude-std()
+frequencyBodyGyroscopeJerkMagnitude-mean()
+frequencyBodyGyroscopeJerkMagnitude-std()
+

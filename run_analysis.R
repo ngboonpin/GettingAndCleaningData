@@ -1,38 +1,42 @@
 #set working directory
-setwd("C:/Users/ngboonpin/Documents/UCI HAR")
+setwd("C:/Users/boonpng/Documents/R_Coursera/Cleaning Data/UCI HAR Dataset")
 
 #Read headers for data set
 feature_names = read.table('features.txt')
 head(feature_names)
 
+#activities names
+activity_labels <- read.table('activity_labels.txt')
+colnames(activity_labels) <- c("Activity","Activity_Name")
+
 #read data,activities and subject for test and train
 
 #test data
-test_dat <- read.table('UCI HAR Dataset/test/x_test.txt')
+test_dat <- read.table('test/x_test.txt')
 head(test_dat)
 dim(test_dat)
 
-test_act <- read.table('UCI HAR Dataset/test/y_test.txt')
+test_act <- read.table('test/y_test.txt')
 head(test_act)
 dim(test_act)
 colnames(test_act) <- c("Activity")
 
-test_sub <- read.table('UCI HAR Dataset/test/subject_test.txt')
+test_sub <- read.table('test/subject_test.txt')
 head(test_sub)
 dim(test_sub)
 colnames(test_sub) <- c("Subject")
 
 #train data
-train_dat <- read.table('UCI HAR Dataset/train/X_train.txt')
+train_dat <- read.table('train/X_train.txt')
 head(train_dat)
 dim(train_dat)
 
-train_act <- read.table('UCI HAR Dataset/train/Y_train.txt')
+train_act <- read.table('train/Y_train.txt')
 head(train_act)
 dim(train_act)
 colnames(train_act) <- c("Activity")
 
-train_sub <- read.table('UCI HAR Dataset/train/subject_train.txt')
+train_sub <- read.table('train/subject_train.txt')
 head(train_sub)
 dim(train_sub)
 colnames(train_sub) <- c("Subject")
@@ -63,10 +67,6 @@ selected_column <- append(selected_column,TRUE)
 #get mean and std column
 stage_data1 <- combine_dat[,selected_column]
 
-#activities names
-activity_labels <- read.table('activity_labels.txt')
-colnames(activity_labels) <- c("Activity","Activity_Name")
-
 stage_data2 <- merge(stage_data1,activity_labels,by.x="Activity",by.y="Activity")
 
 #remove column activity that was used for merging data
@@ -81,6 +81,7 @@ names(stage_data2)<-gsub("Mag", "Magnitude", names(stage_data2))
 names(stage_data2)<-gsub("BodyBody", "Body", names(stage_data2))
 
 #Get tidy data
+#library("dplyr")
 tidy_data <- aggregate(. ~ Subject + Activity_Name, stage_data2, mean )
 write.table(tidy_data, file = "tidydata.txt",row.name=FALSE)
 

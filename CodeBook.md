@@ -63,8 +63,8 @@ Activity_Name
 
 **Following Variables are numeric and bounded within [-1,1]:-**
 
-1 timeBodyAccelerometer-mean()-X			
-2 timeBodyAccelerometer-mean()-Y
+1. timeBodyAccelerometer-mean()-X			
+2. timeBodyAccelerometer-mean()-Y
 3 timeBodyAccelerometer-mean()-Z
 4 timeBodyAccelerometer-std()-X
 5 timeBodyAccelerometer-std()-Y

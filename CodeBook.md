@@ -62,60 +62,61 @@ Activity_Name
     - 6 LAYING 
 
 **Following Variables are numeric and bounded within [-1,1]:-**
-timeBodyAccelerometer-mean()-X			
-timeBodyAccelerometer-mean()-Y
-timeBodyAccelerometer-mean()-Z
-timeBodyAccelerometer-std()-X
-timeBodyAccelerometer-std()-Y
-timeBodyAccelerometer-std()-Z
-timeGravityAccelerometer-mean()-X
-timeGravityAccelerometer-mean()-Y
-timeGravityAccelerometer-mean()-Z
-timeGravityAccelerometer-std()-X
-timeGravityAccelerometer-std()-Y
-timeGravityAccelerometer-std()-Z
-timeBodyAccelerometerJerk-mean()-X
-timeBodyAccelerometerJerk-mean()-Y
-timeBodyAccelerometerJerk-mean()-Z
-timeBodyAccelerometerJerk-std()-X
-timeBodyAccelerometerJerk-std()-Y
-timeBodyAccelerometerJerk-std()-Z
-timeBodyGyroscope-mean()-X
-timeBodyGyroscope-mean()-Y
-timeBodyGyroscope-mean()-Z
-timeBodyGyroscope-std()-X
-timeBodyGyroscope-std()-Y
-timeBodyGyroscope-std()-Z
-timeBodyGyroscopeJerk-mean()-X
-timeBodyGyroscopeJerk-mean()-Y
-timeBodyGyroscopeJerk-mean()-Z
-timeBodyGyroscopeJerk-std()-X
-timeBodyGyroscopeJerk-std()-Y
-timeBodyGyroscopeJerk-std()-Z
-timeBodyAccelerometerMagnitude-mean()
-timeBodyAccelerometerMagnitude-std()
-timeGravityAccelerometerMagnitude-mean()
-timeGravityAccelerometerMagnitude-std()
-timeBodyAccelerometerJerkMagnitude-mean()
-timeBodyAccelerometerJerkMagnitude-std()
-timeBodyGyroscopeMagnitude-mean()
-timeBodyGyroscopeMagnitude-std()
-timeBodyGyroscopeJerkMagnitude-mean()
-timeBodyGyroscopeJerkMagnitude-std()
-frequencyBodyAccelerometer-mean()-X
-frequencyBodyAccelerometer-mean()-Y
-frequencyBodyAccelerometer-mean()-Z
-frequencyBodyAccelerometer-std()-X
-frequencyBodyAccelerometer-std()-Y
-frequencyBodyAccelerometer-std()-Z
-frequencyBodyAccelerometerJerk-mean()-X
-frequencyBodyAccelerometerJerk-mean()-Y
-frequencyBodyAccelerometerJerk-mean()-Z
-frequencyBodyAccelerometerJerk-std()-X
-frequencyBodyAccelerometerJerk-std()-Y
-frequencyBodyAccelerometerJerk-std()-Z
-frequencyBodyGyroscope-mean()-X
-frequencyBodyGyroscope-mean()-Y
+
+1 timeBodyAccelerometer-mean()-X			
+2 timeBodyAccelerometer-mean()-Y
+3 timeBodyAccelerometer-mean()-Z
+4 timeBodyAccelerometer-std()-X
+5 timeBodyAccelerometer-std()-Y
+6 timeBodyAccelerometer-std()-Z
+7 timeGravityAccelerometer-mean()-X
+8 timeGravityAccelerometer-mean()-Y
+9 timeGravityAccelerometer-mean()-Z
+10 timeGravityAccelerometer-std()-X
+11 timeGravityAccelerometer-std()-Y
+12 timeGravityAccelerometer-std()-Z
+13 timeBodyAccelerometerJerk-mean()-X
+14 timeBodyAccelerometerJerk-mean()-Y
+15 timeBodyAccelerometerJerk-mean()-Z
+16 timeBodyAccelerometerJerk-std()-X
+17 timeBodyAccelerometerJerk-std()-Y
+18 timeBodyAccelerometerJerk-std()-Z
+19 timeBodyGyroscope-mean()-X
+20 timeBodyGyroscope-mean()-Y
+21 timeBodyGyroscope-mean()-Z
+22 timeBodyGyroscope-std()-X
+23 timeBodyGyroscope-std()-Y
+24 timeBodyGyroscope-std()-Z
+25 timeBodyGyroscopeJerk-mean()-X
+26 timeBodyGyroscopeJerk-mean()-Y
+27 timeBodyGyroscopeJerk-mean()-Z
+28 timeBodyGyroscopeJerk-std()-X
+29 timeBodyGyroscopeJerk-std()-Y
+30 timeBodyGyroscopeJerk-std()-Z
+31 timeBodyAccelerometerMagnitude-mean()
+32 timeBodyAccelerometerMagnitude-std()
+33 timeGravityAccelerometerMagnitude-mean()
+34 timeGravityAccelerometerMagnitude-std()
+35 timeBodyAccelerometerJerkMagnitude-mean()
+36 timeBodyAccelerometerJerkMagnitude-std()
+37 timeBodyGyroscopeMagnitude-mean()
+38 timeBodyGyroscopeMagnitude-std()
+39 timeBodyGyroscopeJerkMagnitude-mean()
+40 timeBodyGyroscopeJerkMagnitude-std()
+41 frequencyBodyAccelerometer-mean()-X
+42 frequencyBodyAccelerometer-mean()-Y
+43 frequencyBodyAccelerometer-mean()-Z
+44 frequencyBodyAccelerometer-std()-X
+45 frequencyBodyAccelerometer-std()-Y
+46 frequencyBodyAccelerometer-std()-Z
+47 frequencyBodyAccelerometerJerk-mean()-X
+48 frequencyBodyAccelerometerJerk-mean()-Y
+49 frequencyBodyAccelerometerJerk-mean()-Z
+50 frequencyBodyAccelerometerJerk-std()-X
+51 frequencyBodyAccelerometerJerk-std()-Y
+52 frequencyBodyAccelerometerJerk-std()-Z
+53 frequencyBodyGyroscope-mean()-X
+54 frequencyBodyGyroscope-mean()-Y
 frequencyBodyGyroscope-mean()-Z
 frequencyBodyGyroscope-std()-X
 frequencyBodyGyroscope-std()-Y

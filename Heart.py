@@ -33,7 +33,7 @@ path_input_file = first_input
 #path_input_file = "C:/Documents/Master Study/ABAV/Assignment/data/heart.csv" #
 #assert os.path.isfile(path_input_file)
 logging.debug(f'got input file: {path_input_file}, {did}, {input_files}')
-path_output_file = path_output / 'Top_5_Break_Failure_Model.xlsx'
+path_output_file = path_output / 'heart.csv'
 
 # %% Check all paths
 assert path_input_file.exists(), "Can't find required mounted path: {}".format(path_input_file)

@@ -29,9 +29,9 @@ input_files_path = Path(os.path.join(path_input, did))
 input_files = list(input_files_path.iterdir())
 first_input = input_files.pop()
 #assert len(input_files) == 1, "Currently, only 1 input file is supported."
-path_input_file = first_input / 'heart.csv'
+path_input_file = first_input 
 #path_input_file = "C:/Documents/Master Study/ABAV/Assignment/data/heart.csv" #
-assert os.path.isfile(path_input_file)
+#assert os.path.isfile(path_input_file)
 logging.debug(f'got input file: {path_input_file}, {did}, {input_files}')
 path_output_file = path_output / 'heart_result.csv'
 

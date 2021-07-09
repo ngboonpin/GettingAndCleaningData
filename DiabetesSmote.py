@@ -28,7 +28,7 @@ did = dids[0]
 input_files_path = Path(os.path.join(path_input, did))
 input_files = list(input_files_path.iterdir())
 first_input = input_files.pop()
-assert len(input_files) == 1, "Currently, only 1 input file is supported."
+#assert len(input_files) == 1, "Currently, only 1 input file is supported."
 path_input_file = first_input
 #path_input_file = "C:/Documents/Master Study/ABAV/Assignment/data/heart.csv" #
 #path_input_file = "C:/Documents/Master Study/AML/Assignment/Dataset/diabetes_cleaned_smote.csv"

@@ -8,17 +8,17 @@ library(jsonlite)
 #set working directory
 #setwd("C:/ProgramData/Docker/RImagePrep")
 
-log_print("Get environment variables")
 #get environment variables
 path_logs <- Sys.getenv("LOGS","/data/logs/")
 tmp <- file.path(path_logs,"custom.log")
 log_open(tmp)
+log_print("Get environment variables")
 log_print(paste0("LOGS:", path_logs))
 
-path_input <- Sys.getenv("INPUTS","/data/inputs")
+path_input <- Sys.getenv("INPUTS","/data/inputs/")
 log_print(paste0("INPUTS:", path_input))
 
-path_output <- Sys.getenv("INPUTS","/data/outputs")
+path_output <- Sys.getenv("INPUTS","/data/outputs/")
 log_print(paste0("OUTPUTS:", path_output))
 
 
@@ -26,7 +26,7 @@ dids <- fromJSON(Sys.getenv("DIDS","[]"))
 log_print(paste0("DIDS:", dids))
 
 did <- dids[1]
-input_files_path <- path_input
+input_files_path <- paste0(path_input,dids)
 log_print(paste0("input_files_path:", input_files_path))
 
 # import dataframe

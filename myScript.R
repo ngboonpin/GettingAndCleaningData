@@ -47,6 +47,7 @@ plot_data <- df[,StateCount:=.N, by = state]
 #group_by(state) %>%
 #count()
 log_print("Aggregate Data")
+log_print(plot_data[1])
 
 # save manipulated data to output folder
 log_print("Start writing to file")

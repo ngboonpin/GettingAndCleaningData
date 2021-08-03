@@ -28,12 +28,14 @@ log_print(paste0("DIDS:", dids))
 did <- dids[1]
 input_files_path <- paste0(path_input,dids)
 log_print(paste0("input_files_path:", input_files_path))
+log_print(list.files(path = input_files_path, recursive = TRUE))
 
 # import dataframe
 ##list.files(path = input_files_path, pattern = ".csv", recursive = TRUE)
 df <- lapply(list.files(path = input_files_path, recursive = TRUE), fread)
+df <- fread(paste0(input_files_path,'0'))
 log_print("Read input files")
-log_print(df[,1])
+log_print(df[1])
 
 df <- Reduce(rbind, df)
 log_print("Combine dataframe")

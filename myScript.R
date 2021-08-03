@@ -26,7 +26,7 @@ dids <- fromJSON(Sys.getenv("DIDS","[]"))
 log_print(paste0("DIDS:", dids))
 
 did <- dids[1]
-input_files_path <- paste0(path_input,dids)
+input_files_path <- paste0(path_input,'/',dids)
 log_print(paste0("input_files_path:", input_files_path))
 log_print(list.files(path = input_files_path, recursive = TRUE))
 

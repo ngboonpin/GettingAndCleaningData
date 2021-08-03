@@ -7,7 +7,7 @@ library(jsonlite)
 library(data.table)
 
 #set working directory
-setwd("C:/ProgramData/Docker/RImagePrep")
+#setwd("C:/ProgramData/Docker/RImagePrep")
 
 #get environment variables
 path_logs <- Sys.getenv("LOGS","/data/logs")

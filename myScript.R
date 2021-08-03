@@ -3,24 +3,35 @@ library(dplyr)
 library(ggplot2)
 library(forcats)
 library(logr)
+library(jsonlite)
 
 #set working directory
 #setwd("C:/ProgramData/Docker/RImagePrep")
 
-#get environment variables
-path_input <- Sys.getenv("INPUTS","/data/inputs")
-path_output <- Sys.getenv("INPUTS","/data/outputs")
-path_logs <- Sys.getenv("LOGS","/data/logs/")
-
-input_files_path <- path_input
-
 tmp <- file.path(path_logs,"custom.log")
-
 log_open(tmp)
 
+log_print("Get environment variables")
+#get environment variables
+path_input <- Sys.getenv("INPUTS","/data/inputs")
+log_print(paste0("INPUTS:", path_input))
+
+path_output <- Sys.getenv("INPUTS","/data/outputs")
+log_print(paste0("OUTPUTS:", path_output))
+
+path_logs <- Sys.getenv("LOGS","/data/logs/")
+log_print(paste0("LOGS:", path_logs))
+
+dids <- fromJSON(Sys.getenv("DIDS","[]"))
+log_print(paste0("DIDS:", dids))
+
+did <- dids[1]
+input_files_path <- path_input
+log_print(paste0("input_files_path:", input_files_path))
+
 # import dataframe
-list.files(path = input_files_path, pattern = ".csv", recursive = TRUE)
-df <- lapply(list.files(path = input_files_path, pattern = ".csv", recursive = TRUE), read.csv)
+##list.files(path = input_files_path, pattern = ".csv", recursive = TRUE)
+df <- lapply(list.files(path = input_files_path, recursive = TRUE), read.csv)
 log_print("Read input files")
 
 df <- Reduce(rbind, df)

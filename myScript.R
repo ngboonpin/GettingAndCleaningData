@@ -33,7 +33,28 @@ log_print(list.files(path = input_files_path, recursive = TRUE))
 # import dataframe
 ##list.files(path = input_files_path, pattern = ".csv", recursive = TRUE)
 #df <- lapply(list.files(path = input_files_path, recursive = TRUE), fread)
-df <- fread(paste0(input_files_path,'/0'))
+#df <- fread(paste0(input_files_path,'/0'))
+#df <- fread(paste0(input_files_path,list.files(path = input_files_path, recursive = TRUE)))
+
+t <- paste0(input_files_path,list.files(path = input_files_path, recursive = TRUE))
+
+i <- 0
+
+for(i in 1:length(t))
+{
+  if(i==1)
+  {
+    df <- fread(t[i])
+  } else
+  {
+    tmp_df <- fread(t[i])
+    df <- rbind(df,tmp_df)
+  }
+  print(t[i])
+  tmp_df <- NULL
+}
+
+
 log_print("Read input files")
 log_print(df[1])
 

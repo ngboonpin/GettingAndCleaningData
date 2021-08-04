@@ -55,21 +55,17 @@ write_csv(plot_data, paste0(path_output,"/plot_data.csv"))
 log_print("Complete writing to file")
 
 # create plot based on manipulated data
-#log_print("Start plotting chart")
-#plot <- plot_data %>% 
-#  ggplot()+
-#  geom_col(aes(fct_reorder(state, n), 
-#               n, 
-#               fill = n))+
-#  coord_flip()+
-#  labs(
-#    title = "Number of people by state",
-#    subtitle = "From US-500 dataset",
-#    x = "State",
-#    y = "Number of people"
-#  )+ 
-#  theme_bw()
+log_print("Start plotting chart")
+plot <- ggplot(df, aes(state))+
+  geom_bar()+
+  labs(
+    title = "Number of people by state",
+    subtitle = "From US-500 dataset",
+    x = "State",
+    y = "Number of people"
+  )+ 
+  theme_bw()
 
 # save plot to output folder
-#ggsave(paste0(path_output,"/myplot.png"), width = 10, height = 8, dpi = 100)
-#log_print("Saved chart")
+ggsave(paste0(path_output,"/myplot.png"), width = 10, height = 8, dpi = 100)
+log_print("Saved chart")

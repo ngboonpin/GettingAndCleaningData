@@ -36,7 +36,7 @@ log_print(list.files(path = input_files_path, recursive = TRUE))
 #df <- fread(paste0(input_files_path,'/0'))
 #df <- fread(paste0(input_files_path,list.files(path = input_files_path, recursive = TRUE)))
 
-t <- paste0(input_files_path,list.files(path = input_files_path, recursive = TRUE))
+t <- paste0(input_files_path,'/',list.files(path = input_files_path, recursive = TRUE))
 
 i <- 0
 

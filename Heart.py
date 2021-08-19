@@ -33,7 +33,8 @@ path_input_file = first_input
 #path_input_file = "C:/Documents/Master Study/ABAV/Assignment/data/heart.csv" #
 #assert os.path.isfile(path_input_file)
 logging.debug(f'got input file: {path_input_file}, {did}, {input_files}')
-path_output_file = path_output / 'heart_result.csv'
+path_output_file1 = path_output / 'heart_result_1.csv'
+path_output_file2 = path_output / 'heart_result_2.csv'
 
 # %% Check all paths
 assert path_input_file.exists(), "Can't find required mounted path: {}".format(path_input_file)
@@ -58,12 +59,20 @@ a = df.replace({'sex': {0:'Female', 1:'Male'}})
 a = a.replace({'cp':{0:'Normal',1:'Typical Angina', 2:'Atypical Angina',3:'Non-angina',4:'Asymptomatic'}})
 a = a.groupby(['sex','cp']).agg({'chol':['min','max']})
 
+logging.debug("Loaded {} records into A DataFrame".format(len(a)))
+
+b = df.replace({'sex': {0:'Female', 1:'Male'}})
+b = b.groupby(['sex']).agg({'thalach':['min','max']})
+
+logging.debug("Loaded {} records into B DataFrame".format(len(b)))
+
 #print(a)
 
 logging.debug("Built summary of records.")
 
-a.to_csv(path_output_file)
-
-logging.debug("Wrote results to {}".format(path_output_file))
+a.to_csv(path_output_file1)
+logging.debug("Wrote results to {}".format(path_output_file1))
+b.to_csv(path_output_file2)
+logging.debug("Wrote results to {}".format(path_output_file2))
 
 logging.debug("FINISHED ALGORITHM EXECUTION")
